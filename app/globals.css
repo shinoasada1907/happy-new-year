@@ -23,4 +23,64 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden; /* Prevent scrollbars during full screen effects */
+}
+
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+     opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.animate-scale-up {
+  animation: scale-up-center 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoom-in-tunnel {
+  0% {
+    opacity: 0;
+    transform: scale(0.1) perspective(500px) translateZ(-1000px);
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) perspective(500px) translateZ(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes rainbow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-fade-in {
+  animation: fade-in 3s ease-in-out forwards;
+}
+
+.animate-zoom-in-tunnel {
+  animation: zoom-in-tunnel 5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.animate-rainbow {
+  background-size: 200% auto;
+  animation: rainbow 5s linear infinite;
 }
