@@ -115,11 +115,11 @@ export default function Home() {
         <>
           <Fireworks isShooting={phase === "fireworks"} />
           {showText && (
-            <div className="absolute inset-0 z-50 flex flex-col items-center justify-center animate-zoom-in-tunnel pointer-events-none">
-               <h1 className="text-6xl md:text-9xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-orange-500 via-yellow-500 via-green-500 via-blue-500 via-indigo-500 via-violet-500 to-red-500 animate-rainbow drop-shadow-[0_0_15px_rgba(255,255,255,0.5)]">
+            <div className="absolute inset-0 z-50 flex flex-col items-center justify-center animate-zoom-in-tunnel pointer-events-none w-full">
+               <h1 className="text-6xl md:text-9xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-orange-500 via-yellow-500 via-green-500 via-blue-500 via-indigo-500 via-violet-500 to-red-500 animate-rainbow drop-shadow-[0_0_15px_rgba(255,255,255,0.5)] text-center w-full px-4">
                  HAPPY NEW YEAR!
                </h1>
-               <p className="mt-8 text-white text-2xl font-light tracking-widest drop-shadow-md">
+               <p className="mt-8 text-white text-2xl font-light tracking-widest drop-shadow-md text-center px-4">
                   Wishing you a wonderful year ahead.
                </p>
             </div>
