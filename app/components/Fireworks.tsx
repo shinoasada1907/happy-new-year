@@ -15,6 +15,8 @@ export default function Fireworks({ isShooting = true }: FireworksProps) {
   }, [isShooting]);
 
 
+
+
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
